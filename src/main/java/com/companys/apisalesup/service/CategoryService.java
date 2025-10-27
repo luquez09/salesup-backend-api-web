@@ -1,7 +1,6 @@
 package com.companys.apisalesup.service;
 
 import com.companys.apisalesup.dto.CategoriesDto;
-
 import java.util.List;
 
 public interface CategoryService {

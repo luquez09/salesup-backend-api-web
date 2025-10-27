@@ -59,7 +59,7 @@ public class CategoryServiceImp implements CategoryService {
 
     @Override
     public void deleteCategory(CategoriesDto categoriesDto) {
-        Category categoryUpdate = categoriesRepository.findById(categoriesDto.getIdCategories())
+        categoriesRepository.findById(categoriesDto.getIdCategories())
                 .orElseThrow(
                         () -> new ResourceNotFoundException(
                                 "Categoria no encontra con id: "

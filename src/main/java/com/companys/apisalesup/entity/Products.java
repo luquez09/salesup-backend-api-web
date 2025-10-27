@@ -21,13 +21,13 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProduct;
 
-    @Column(name = "name_product", length = 150, nullable = false)
+    @Column(name = "name_product")
     private String nameProduct;
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price")
     private Double priceProduct;
 
-    @Column(name = "stock", length = 150, nullable = false)
+    @Column(name = "stock")
     private Integer stockProduct;
 
     @Column(name = "available")
