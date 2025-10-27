@@ -28,17 +28,4 @@ public class ProductsMapper {
                 productsDto.getCategoryId()
         );
     }
-
-    public static Products mapUpdateToProduct(Products products) {
-        return new Products(
-                products.getIdProduct(),
-                products.getNameProduct(),
-                products.getPriceProduct(),
-                products.getStockProduct(),
-                products.getAvailableProduct(),
-                products.getCodeProduct(),
-                products.getCategoryId()
-        );
-    }
-
 }
