@@ -10,33 +10,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
+import java.util.Date;
+
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "products")
-public class Products {
+@Entity(name = "list_prices")
+public class ListPrice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    private Integer idPriceList;
+
+    @Column(name = "product_id")
     private Integer idProduct;
 
-    @Column(name = "name_product")
-    private String nameProduct;
-
     @Column(name = "price")
-    private Double priceProduct;
+    private Double price;
 
-    @Column(name = "stock")
-    private Integer stockProduct;
+    @Column(name = "affective_date")
+    private Date dateCreate;
 
-    @Column(name = "available")
-    private Boolean availableProduct;
-
-    @Column(name = "code")
-    private String codeProduct;
-
-    @Column(name = "category_id")
-    private Integer categoryId;
 }
