@@ -16,7 +16,7 @@ public class RolesController {
 
     private RolesService rolesService;
 
-    @GetMapping(value = "/saveproduct")
+    @PostMapping(value = "/saveroles")
     public ResponseEntity<RoleDto> createRoles(@RequestBody RoleDto createProduct) {
         RoleDto productsDto = rolesService.createRoles(createProduct);
         return new ResponseEntity<>(productsDto, HttpStatus.CREATED);
@@ -27,7 +27,7 @@ public class RolesController {
         return ResponseEntity.ok(rolesService.listRoles());
     }
 
-    @DeleteMapping
+        @DeleteMapping
     public ResponseEntity<String> deleteRoles(@RequestParam Integer idRoles) {
         rolesService.deleteRole(idRoles);
         return ResponseEntity.ok("Eliminado Correctamente.");
