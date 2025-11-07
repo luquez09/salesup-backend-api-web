@@ -27,7 +27,7 @@ public class ProductHistoryServiceImp implements ProductHistoryService {
     @Override
     public List<ProductHistoryDto> searchProductHistoryIdProduct(Integer idProduct) {
         return historyRepository.findProductHistoriesByIdProduct(idProduct)
-                .stream().map((history) -> HistoryProductMapper.mapToProductHistoryDto(history))
+                .stream().map(HistoryProductMapper::mapToProductHistoryDto)
                 .collect(Collectors.toList());
     }
 
