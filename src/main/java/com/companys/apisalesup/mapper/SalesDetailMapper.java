@@ -14,7 +14,8 @@ public class SalesDetailMapper {
                 saleDetailDto.getQuantityPrice(),
                 saleDetailDto.getQuantityPriceTotal(),
                 saleDetailDto.getQuantityArticle(),
-                saleDetailDto.getPaid()
+                saleDetailDto.getPaid(),
+                saleDetailDto.getRegisterDetail()
         );
     }
 
@@ -27,7 +28,8 @@ public class SalesDetailMapper {
                 saleDetailDto.getQuantityPrice(),
                 saleDetailDto.getQuantityPriceTotal(),
                 saleDetailDto.getQuantityArticle(),
-                saleDetailDto.getPaid()
+                saleDetailDto.getPaid(),
+                saleDetailDto.getRegisterDetail()
         );
     }
 

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -37,5 +39,8 @@ public class SaleDetail {
 
     @Column(name = "paid")
     private Boolean paid;
+
+    @Column(name = "register_detail")
+    private Date registerDetail;
 
 }
