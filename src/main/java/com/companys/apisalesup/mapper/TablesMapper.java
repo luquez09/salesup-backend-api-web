@@ -2,7 +2,6 @@ package com.companys.apisalesup.mapper;
 
 import com.companys.apisalesup.dto.TablesDto;
 import com.companys.apisalesup.entity.Tables;
-import jakarta.persistence.Table;
 
 public class TablesMapper {
 
