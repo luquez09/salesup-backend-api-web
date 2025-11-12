@@ -4,7 +4,6 @@ import com.companys.apisalesup.dto.SaleDetailDto;
 import com.companys.apisalesup.mapper.SalesDetailMapper;
 import com.companys.apisalesup.repository.SalesDetailRepository;
 import com.companys.apisalesup.service.SaleDetailService;
-
 import java.util.List;
 import java.util.stream.Collectors;
 

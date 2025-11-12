@@ -10,8 +10,8 @@ import java.util.List;
 public interface ProductsRepository extends JpaRepository <Products, Integer> {
 
     @Query(value = """
-    SELECT * FROM Products p
-    WHERE (:name IS NULL OR LOWER(p.name_product) LIKE LOWER(CONCAT('%', :name, '%')))
+      SELECT * FROM Products p
+      WHERE (:name IS NULL OR LOWER(p.name_product) LIKE LOWER(CONCAT('%', :name, '%')))
       AND (:code IS NULL OR p.code = :code)
       AND (:available IS NULL OR p.available = :available)
       """, nativeQuery = true)
