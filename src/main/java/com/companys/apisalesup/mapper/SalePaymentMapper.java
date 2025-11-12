@@ -5,7 +5,7 @@ import com.companys.apisalesup.entity.SalePayments;
 
 public class SalePaymentMapper {
 
-    public static SalePayments mapToSalePayment(SalePayments salePayments) {
+    public static SalePayments mapToSalePayment(SalePaymentsDto salePayments) {
         return new SalePayments (
                 salePayments.getIdSalePayment(),
                 salePayments.getIdSale(),

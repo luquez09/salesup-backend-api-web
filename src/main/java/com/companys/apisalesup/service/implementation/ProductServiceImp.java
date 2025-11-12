@@ -29,7 +29,7 @@ public class ProductServiceImp implements ProductsService {
     @Override
     public List<ProductsDto> allProducts() {
         return productsRepository.findAll().stream()
-                .map((products -> ProductsMapper.mapToProductDto(products)))
+                .map((ProductsMapper::mapToProductDto))
                 .collect(Collectors.toList());
     }
 
@@ -39,7 +39,7 @@ public class ProductServiceImp implements ProductsService {
                         filterProduct.getNameProduct(),
                         filterProduct.getCodeProduct(),
                         filterProduct.getAvailableProduct())
-                .stream().map((products -> ProductsMapper.mapToProductDto(products)))
+                .stream().map((ProductsMapper::mapToProductDto))
                 .collect(Collectors.toList());
     }
 
