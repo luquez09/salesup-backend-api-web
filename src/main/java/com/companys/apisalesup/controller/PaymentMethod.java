@@ -22,17 +22,17 @@ public class PaymentMethod {
 
     private PaymentMethodService paymentMethodService;
 
-    @PostMapping("/savetable")
-    private ResponseEntity<PaymentMethodDto> saveTables(@RequestBody PaymentMethodDto paymentMethodDto) {
+    @PostMapping("/savemethod")
+    private ResponseEntity<PaymentMethodDto> saveMethod(@RequestBody PaymentMethodDto paymentMethodDto) {
         return new ResponseEntity<>(paymentMethodService.savePaymentMethod(paymentMethodDto), HttpStatus.CREATED);
     }
 
-    @GetMapping("/searchtables")
-    private ResponseEntity<List<PaymentMethodDto>> getAllTables() {
+    @GetMapping("/searchmethod")
+    private ResponseEntity<List<PaymentMethodDto>> getAllMethod() {
         return ResponseEntity.ok(paymentMethodService.searchAllPaymentMethod());
     }
 
-    @DeleteMapping("/deletetable")
+    @DeleteMapping("/deletemethod")
     private ResponseEntity<String> deleteTable(@RequestParam Integer idPayment) {
         paymentMethodService.deletePaymentMethod(idPayment);
         return ResponseEntity.ok("Metodo de pago eliminada del sistema.");

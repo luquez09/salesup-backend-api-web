@@ -1,12 +1,12 @@
 package com.companys.apisalesup.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -38,6 +38,10 @@ public class Sales {
     private String sellerName;
 
     @Column(name = "sale_date")
-    private Date saleDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDateTime saleDate;
+
+    @Column(name = "active")
+    private Boolean active;
 
 }

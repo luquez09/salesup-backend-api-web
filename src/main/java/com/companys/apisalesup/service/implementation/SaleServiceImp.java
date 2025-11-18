@@ -7,9 +7,9 @@ import com.companys.apisalesup.repository.SaleRepository;
 import com.companys.apisalesup.service.SaleService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -24,8 +24,10 @@ public class SaleServiceImp implements SaleService {
     }
 
     @Override
-    public List<SalesDto> findSearchSales(LocalDate starDate, LocalDate endDate, String sellerName) {
-        List<Sales> salesList = saleRepository.findSalesBetweenDatesAndSeller(starDate, endDate, sellerName);
+    public List<SalesDto> findSearchSales(LocalDateTime starDate, String sellerName) {
+        if (Objects.isNull(starDate)) starDate = LocalDateTime.now();
+
+        List<Sales> salesList = saleRepository.findSalesBetweenDatesAndSeller(starDate, sellerName);
         return salesList.stream().map(SalesMapper::toSalesMapperDto).toList();
     }
 

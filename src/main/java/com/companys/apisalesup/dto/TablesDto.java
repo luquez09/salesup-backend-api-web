@@ -13,6 +13,5 @@ public class TablesDto {
 
     private Integer idTable;
     private Integer numberTable;
-
     private Boolean availableTable;
 }

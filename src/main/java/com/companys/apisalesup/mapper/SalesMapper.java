@@ -14,7 +14,8 @@ public class SalesMapper {
             salesdto.getAdditional(),
             salesdto.getInvoiceNumber(),
             salesdto.getSellerName(),
-            salesdto.getSaleDate()
+            salesdto.getSaleDate(),
+            salesdto.getActive()
         );
     }
 
@@ -27,7 +28,8 @@ public class SalesMapper {
             sales.getAdditional(),
             sales.getInvoiceNumber(),
             sales.getSellerName(),
-            sales.getSaleDate()
+            sales.getSaleDate(),
+            sales.getActive()
         );
     }
 
