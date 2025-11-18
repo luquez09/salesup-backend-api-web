@@ -8,5 +8,6 @@ public interface TableService {
 
     TablesDto saveTable(TablesDto tablesDto);
     List<TablesDto> searchTables();
+    void deleteTable(Integer idTable);
 
 }

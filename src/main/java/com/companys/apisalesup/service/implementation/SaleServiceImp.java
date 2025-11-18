@@ -30,4 +30,9 @@ public class SaleServiceImp implements SaleService {
         List<Sales> salesList = saleRepository.findSalesTable(idTable);
         return salesList.stream().map(SalesMapper::toSalesMapperDto).toList();
     }
+
+    @Override
+    public void deleteSale(Integer idSale) {
+        saleRepository.deleteById(idSale);
+    }
 }

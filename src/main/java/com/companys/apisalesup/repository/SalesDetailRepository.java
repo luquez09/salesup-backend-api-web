@@ -13,6 +13,6 @@ public interface SalesDetailRepository extends JpaRepository<SaleDetail, Integer
             SELECT * FROM sale_details sd
             WHERE (:idsale IS NULL OR sd.id = :idsale)
             """, nativeQuery = true)
-    public List<SaleDetail> findAllDetailtForIdSales(
+    public List<SaleDetail> findAllDetailForIdSales(
             @Param("idsale") Integer idSale);
 }

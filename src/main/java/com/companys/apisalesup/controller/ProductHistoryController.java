@@ -1,7 +1,6 @@
 package com.companys.apisalesup.controller;
 
 import com.companys.apisalesup.dto.ProductHistoryDto;
-import com.companys.apisalesup.entity.ProductHistory;
 import com.companys.apisalesup.service.ProductHistoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/history")
-public class HistoryProductController {
+public class ProductHistoryController {
 
     private ProductHistoryService historyService;
 

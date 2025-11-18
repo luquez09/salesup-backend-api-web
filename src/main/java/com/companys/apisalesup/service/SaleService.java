@@ -10,4 +10,5 @@ public interface SaleService {
     SalesDto saveSales(SalesDto salesDto);
     List<SalesDto> findSearchSales(LocalDate starDate, LocalDate endDate, String sellerName);
     List<SalesDto> findSalesTable(Integer idTable);
+    void deleteSale(Integer idTable);
 }
