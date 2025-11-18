@@ -41,7 +41,8 @@ public class SaleController {
     }
 
     @DeleteMapping("/deletesale")
-    private ResponseEntity<String> deleteSale() {
+    private ResponseEntity<String> deleteSale(@RequestParam Integer idSale) {
+        saleService.deleteSale(idSale);
         return ResponseEntity.ok("Venta eliminada del sistema.");
     }
 }

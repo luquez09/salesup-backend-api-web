@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tables")
+@Entity(name = "tables")
 public class Tables {
 
     @Id
