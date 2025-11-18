@@ -5,10 +5,14 @@ import com.companys.apisalesup.entity.Sales;
 import com.companys.apisalesup.mapper.SalesMapper;
 import com.companys.apisalesup.repository.SaleRepository;
 import com.companys.apisalesup.service.SaleService;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class SaleServiceImp implements SaleService {
 
     private SaleRepository saleRepository;

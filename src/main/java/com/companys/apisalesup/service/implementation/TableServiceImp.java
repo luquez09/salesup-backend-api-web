@@ -4,8 +4,12 @@ import com.companys.apisalesup.dto.TablesDto;
 import com.companys.apisalesup.mapper.TablesMapper;
 import com.companys.apisalesup.repository.TableRepository;
 import com.companys.apisalesup.service.TableService;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class TableServiceImp implements TableService {
 
     private TableRepository tableRepository;

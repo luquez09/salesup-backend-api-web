@@ -5,10 +5,12 @@ import com.companys.apisalesup.dto.SearchSalePayment;
 import com.companys.apisalesup.mapper.SalePaymentMapper;
 import com.companys.apisalesup.repository.SalePaymentRepository;
 import com.companys.apisalesup.service.SalePaymentService;
-
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.stream.Collectors;
 
+@Service
+@AllArgsConstructor
 public class SalesPaymentServiceImp implements SalePaymentService {
 
     private SalePaymentRepository paymentRepository;

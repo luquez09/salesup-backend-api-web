@@ -4,9 +4,14 @@ import com.companys.apisalesup.dto.SaleDetailDto;
 import com.companys.apisalesup.mapper.SalesDetailMapper;
 import com.companys.apisalesup.repository.SalesDetailRepository;
 import com.companys.apisalesup.service.SaleDetailService;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
+@AllArgsConstructor
 public class SaleDetailServiceImp implements SaleDetailService {
 
     private SalesDetailRepository detailRepository;
