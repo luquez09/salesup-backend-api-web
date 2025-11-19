@@ -7,7 +7,6 @@ import java.util.List;
 public interface SaleDetailService {
 
     SaleDetailDto saveSaleDetail(SaleDetailDto saleDetailDto);
-    List<SaleDetailDto> searchSalePayments();
     List<SaleDetailDto> searchSalePayments(Integer idSale);
     void deleteSalDetail(Integer idDetail);
 

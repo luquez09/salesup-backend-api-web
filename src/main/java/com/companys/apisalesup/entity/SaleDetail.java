@@ -1,12 +1,13 @@
 package com.companys.apisalesup.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -41,6 +42,7 @@ public class SaleDetail {
     private Boolean paid;
 
     @Column(name = "register_detail")
-    private Date registerDetail;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDateTime registerDetail;
 
 }

@@ -27,13 +27,9 @@ public class SaleDetailsController {
         return new ResponseEntity<>(saleDetailService.saveSaleDetail(saleDetailDto), HttpStatus.CREATED);
     }
 
-    @GetMapping("/searchdetail")
-    public ResponseEntity<List<SaleDetailDto>> searchSaleDetail() {
-        return ResponseEntity.ok(saleDetailService.searchSalePayments());
-    }
-
     @GetMapping("/searchdetailsale")
     public ResponseEntity<List<SaleDetailDto>> searchSaleDetailIdSale(@RequestParam Integer idSale) {
+
         return ResponseEntity.ok(saleDetailService.searchSalePayments(idSale));
     }
 

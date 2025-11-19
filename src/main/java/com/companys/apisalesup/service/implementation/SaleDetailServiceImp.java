@@ -25,11 +25,6 @@ public class SaleDetailServiceImp implements SaleDetailService {
     }
 
     @Override
-    public List<SaleDetailDto> searchSalePayments() {
-        return List.of();
-    }
-
-    @Override
     public List<SaleDetailDto> searchSalePayments(Integer idSale) {
         return detailRepository.findAllDetailForIdSales(idSale)
                 .stream()
